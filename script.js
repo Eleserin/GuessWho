@@ -25,3 +25,5 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'the number is lower!';
   }
 });
+//lets check some changes
+//try to create DOM manipulation object
