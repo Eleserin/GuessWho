@@ -10,6 +10,7 @@ console.log(document.querySelector('.guess').value);
  */
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highScore = 0;
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   document.querySelector('.score').textContent = score;
@@ -33,6 +34,10 @@ document.querySelector('.check').addEventListener('click', function () {
       'Congradulatiobs! Nube is correct';
     document.querySelector('body').style.backgroundColor = 'green';
     document.querySelector('.number').style.width = '30rem';
+    if (highScore < score) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = score;
+    }
     // number is bigger
   } else if (guess > secretNumber) {
     if (score > 1) {
